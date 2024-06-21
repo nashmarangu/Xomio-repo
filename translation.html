@@ -36,8 +36,8 @@
     <header>
       <div class="logo"><img src="./images/xomio.svg" alt="logo" /></div>
       <div class="top-links">
-        <a href="" class="w-included">What’s Included?</a>
-        <a href="" class="x-translation">Xomio Translations</a>
+        <a href="./what-inc.html" class="w-included">What’s Included?</a>
+        <a href="#" class="x-translation">Xomio Translations</a>
       </div>
       <div class="header-btns">
         <div class="buy-now">
@@ -48,6 +48,15 @@
         <div class="book-demo">
           <a href="#">Book a Demo</a>
         </div>
+      </div>
+      <!-- mobile-menu -->
+      <button class="menu-btn">☰</button>
+
+      <div class="mobile-menu">
+        <button class="close-btn">X</button>
+        <a href="#">Home</a>
+        <a href="./translation.html">Xomio Translations</a>
+        <a href="./what-inc.html">What’s Includeed</a>
       </div>
     </header>
 
@@ -425,6 +434,19 @@
 
         return iframes[videoId] || "";
       }
+    </script>
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const closeBtn = document.querySelector(".close-btn");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.style.display = "flex";
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.style.display = "none";
+      });
     </script>
   </body>
 </html>
